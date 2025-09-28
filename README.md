@@ -92,15 +92,6 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 
 ## Repository 구조
 
-app/
-├── manifests/
-│ └── AndroidManifest.xml
-│
-├── java/edu/skku/map/pp
-│ ├── MainActivity.kt # 로그인 / 회원가입 (Firebase Auth)
-│ ├── RegisterActivity.kt # 신규 사용자 등록
-│ ├── GptActivity.kt # GPT API 연동 / 대화 / 저장
-│ ├── HistoryActivity.kt # Firestore DB 대화 목록 조회 / 삭제
-│ ├── ChatAdapter.kt # RecyclerView 어댑터 (채팅 UI)
-│ ├── HistoryAdapter.kt # RecyclerView 어댑터 (히스토리 UI)
-│ └── ChatMessage.kt # 데이터 클래스 (대화 모델)
+<p align="center">
+  <img src="Screenshots/layout.png" width="400"/>
+</p>
