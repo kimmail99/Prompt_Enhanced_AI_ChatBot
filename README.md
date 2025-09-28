@@ -6,10 +6,10 @@
 ---
 
 ## 프로젝트 개요
-이 프로젝트는 **모바일앱프로그래밍 실습(1인 개발)** 과제로 수행된 **AI 챗봇 플랫폼**입니다.  
-사용자는 이메일/구글 로그인을 통해 인증 후, OpenAI GPT와 실시간 대화를 주고받을 수 있습니다.  
+이 프로젝트는 **모바일앱프로그래밍 실습(1인 개발)** 과제로 수행된 **AI 챗봇 플랫폼**이다.  
+사용자는 이메일/구글 로그인을 통해 인증 후, OpenAI GPT와 실시간 대화를 주고받을 수 있다.  
 또한 **프롬프트 리파인먼트(Question Refinement)** 기법을 적용하여 단순 입력보다 전문가 수준의 질문을 생성하고,  
-Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인화 대화 관리 플랫폼**을 구축했습니다.
+Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인화 대화 관리 플랫폼**을 구축했다.
 
 ---
 
@@ -36,17 +36,7 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 
 ---
 
-### 3. 챗봇 대화 (OpenAI API)
-- OpenAI GPT(gpt-3.5-turbo) API 연동  
-- RecyclerView 기반 실시간 대화 UI  
-
-<p align="center">
-  <img src="Screenshots/Conversation.png" width="500"/>
-</p>
-
----
-
-### 4. 프롬프트 엔지니어링 (Question Refinement)
+### 3. 프롬프트 엔지니어링 (Question Refinement)
 - **입력 전 → Refinement 후** 질문 품질 향상  
 
 <p align="center">
@@ -56,7 +46,17 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 
 예시:  
 - 입력: *“I want to know about Djikstra”*  
-- Refinement → *“What is Dijkstra's algorithm and how does it work?”*  
+- Refinement(Prompt 버튼) → *“What is Dijkstra's algorithm and how does it work?”*  
+
+---
+
+### 4. 챗봇 대화 (OpenAI API)
+- OpenAI GPT(gpt-3.5-turbo) API 연동  
+- RecyclerView 기반 실시간 대화 UI  
+
+<p align="center">
+  <img src="Screenshots/Conversation.png" width="500"/>
+</p>
 
 ---
 
@@ -67,9 +67,13 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 
 <p align="center">
   <img src="Screenshots/SaveConversation.png" width="300"/>
-  <img src="Screenshots/FirestoreDB.png" width="300"/>
   <img src="Screenshots/HistoryPage.png" width="300"/>
 </p>
+
+<p align="center">
+  <img src="Screenshots/FirestoreDB.png" width="600"/>  
+</p>
+
 
 삭제 후 → 빈 화면  
 
