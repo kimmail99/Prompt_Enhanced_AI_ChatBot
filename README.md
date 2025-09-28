@@ -1,51 +1,89 @@
-**Prompt-Enhanced AI Chatbot Platform**
+# Prompt-Enhanced AI Chatbot Platform
 
-Kotlin(Android) · OkHttp3 · OpenAI API · Firebase Auth · Firestore
-사용자 인증, 개인화된 대화 관리, 프롬프트 엔지니어링 기반 품질 개선을 통합한 End-to-End AI 챗봇 애플리케이션
+> **Kotlin(Android) · OkHttp3 · OpenAI API · Firebase Auth · Firestore DB**  
+> 사용자 인증, 대화 저장/조회/삭제, 프롬프트 엔지니어링 기반 응답 품질 개선을 통합한 **End-to-End AI 챗봇 애플리케이션**
 
-[프로젝트 개요]
+---
 
-이 프로젝트는 모바일앱프로그래밍 실습에서 진행된 1인 개발 프로젝트로,
-사용자 로그인/회원가입, OpenAI GPT 연동, 프롬프트 엔지니어링 기반 응답 품질 개선,
-그리고 Firestore DB를 통한 대화 저장·조회·삭제 기능을 제공하는 엔드투엔드 AI 챗봇 플랫폼입니다.
+## 프로젝트 개요
+이 프로젝트는 **모바일앱프로그래밍 실습(1인 개발)** 과제로 수행된 **AI 챗봇 플랫폼**입니다.  
+사용자는 이메일/구글 로그인을 통해 인증 후, OpenAI GPT와 실시간 대화를 주고받을 수 있습니다.  
+또한 **프롬프트 리파인먼트(Question Refinement)** 기법을 적용하여 단순 입력보다 전문가 수준의 질문을 생성하고,  
+Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인화 대화 관리 플랫폼**을 구축했습니다.
 
-[주요 기능]
-1. 사용자 인증 (Firebase Auth)
+---
 
-이메일 회원가입 & 로그인
+## 주요 기능 & 스크린샷
 
-Google 계정 로그인/로그아웃
+### 1. 사용자 인증 (Firebase Auth)
+- 이메일 로그인 / 회원가입
+- Google 계정 로그인 및 로그아웃 지원  
 
-<p align="center"> <img src="screenshots/login.png" alt="로그인 화면" width="300"/> </p>
+<p align="center">
+  <img src="Screenshots/Homepage.png" width="250"/> 
+  <img src="Screenshots/CreateAccount.png" width="250"/> 
+  <img src="Screenshots/GoogleLogin.png" width="250"/> 
+</p>
 
-2. 챗봇 대화 (OpenAI API)
+---
 
-OpenAI GPT(gpt-3.5-turbo) API 연동
+### 2. Firebase Auth 연동 확인
+- 로그인 후, Firebase Auth 대시보드에 사용자 계정이 등록됨  
 
-RecyclerView 기반 실시간 대화 UI
+<p align="center">
+  <img src="Screenshots/FirebaseAuth.png" width="500"/>
+</p>
 
-3. 프롬프트 엔지니어링 (Question Refinement)
+---
 
-단순 입력 대신, **“도메인 식별 → 핵심 의도 추출 → 전문가 수준 질문 재작성”**의 멀티스텝 프롬프트 구조 적용
+### 3. 챗봇 대화 (OpenAI API)
+- OpenAI GPT(gpt-3.5-turbo) API 연동  
+- RecyclerView 기반 실시간 대화 UI  
 
-예시:
+<p align="center">
+  <img src="Screenshots/Conversation.png" width="500"/>
+</p>
 
-입력: “I want to know about Djikstra”
+---
 
-Refinement → “What is Dijkstra's algorithm and how does it work?”
+### 4. 프롬프트 엔지니어링 (Question Refinement)
+- **입력 전 → Refinement 후** 질문 품질 향상  
 
-4. 대화 저장/조회/삭제 (Firestore DB)
+<p align="center">
+  <img src="Screenshots/PromptBefore.png" width="350"/>
+  <img src="Screenshots/PromptAfter.png" width="350"/>
+</p>
 
-SAVE → Firestore에 userId + timestamp 기반으로 저장
+예시:  
+- 입력: *“I want to know about Djikstra”*  
+- Refinement → *“What is Dijkstra's algorithm and how does it work?”*  
 
-LIST → 사용자별 대화 목록 불러오기
+---
 
-CLEAR → Firestore 및 앱 화면에서 해당 대화 삭제
+### 5. Firestore DB 기반 대화 관리
+- **SAVE** 버튼 → 대화 저장  
+- **LIST** 버튼 → 대화 목록 확인  
+- **CLEAR** 버튼 → 대화 삭제  
 
-[성과 & 학습 포인트]
+<p align="center">
+  <img src="Screenshots/SaveConversation.png" width="300"/>
+  <img src="Screenshots/FirestoreDB.png" width="300"/>
+  <img src="Screenshots/HistoryPage.png" width="300"/>
+</p>
 
-엔드투엔드 플랫폼 구축 경험 : 클라이언트–API–DB까지 직접 연결
+삭제 후 → 빈 화면  
 
-프롬프트 엔지니어링 적용 : 단순 챗봇과 차별화된 “질문 품질 향상” 구현
+<p align="center">
+  <img src="Screenshots/EmptyPage.png" width="400"/>
+</p>
 
-실무형 설계 경험 : 사용자 인증, 데이터 영속성, 삭제 기능까지 반영
+---
+
+## 성과 & 학습 포인트
+- **End-to-End 플랫폼 개발 경험**: 클라이언트(Android) ↔ API(OpenAI) ↔ DB(Firestore)까지 파이프라인 구현  
+- **프롬프트 엔지니어링 적용**: Question Refinement 기법을 통해 응답 품질 개선  
+- **실무형 설계 경험**: 사용자 인증, 데이터 영속성, 삭제 기능까지 포함한 개인화 챗봇 플랫폼 완성  
+
+---
+
+## Repository 구조
