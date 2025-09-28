@@ -95,3 +95,19 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 <p align="center">
   <img src="Screenshots/layout.png" width="400"/>
 </p>
+
+---
+
+## How to run
+
+1. 다음 저장소를 클론하세요!:
+   ```bash
+   git clone https://github.com/kimmail99/Prompt_Enhanced_AI_ChatBot.git
+
+2. Android Studio에서 프로젝트를 여세요!
+
+3. 프로젝트 루트 경로( build.gradle.kts 가 있는 위치)에 local.properties 파일을 생성하고, 본인의 OpenAI API 키를 추가하세요!:
+
+OPENAI_API_KEY=sk-xxxxxx
+
+4. Gradle Sync를 진행한 후, 에뮬레이터나 실제 디바이스에서 앱을 실행하면 됩니다!
