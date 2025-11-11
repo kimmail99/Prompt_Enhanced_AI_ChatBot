@@ -52,7 +52,8 @@ Firestore DB를 통해 대화를 저장·조회·삭제할 수 있는 **개인�
 
 ### 4. 챗봇 대화 (OpenAI API)
 - OpenAI GPT(gpt-3.5-turbo) API 연동  
-- RecyclerView 기반 실시간 대화 UI  
+- RecyclerView 기반 실시간 대화 UI
+- 기억 대화(최근 대화 10개 기반)
 
 <p align="center">
   <img src="Screenshots/Conversation.png" width="500"/>
